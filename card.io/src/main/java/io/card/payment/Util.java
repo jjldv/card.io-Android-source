@@ -149,7 +149,7 @@ class Util {
         if (origIntent.getBooleanExtra(CardIOActivity.EXTRA_RETURN_CARD_IMAGE, false)
             && mOverlay != null && mOverlay.getBitmap() != null) {
             ByteArrayOutputStream scaledCardBytes = new ByteArrayOutputStream();
-            mOverlay.getBitmap().compress(Bitmap.CompressFormat.JPEG, 80, scaledCardBytes);
+            mOverlay.getBitmap().compress(Bitmap.CompressFormat.JPEG, 100, scaledCardBytes);
             dataIntent.putExtra(CardIOActivity.EXTRA_CAPTURED_CARD_IMAGE, scaledCardBytes.toByteArray());
         }
 

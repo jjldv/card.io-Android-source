@@ -259,10 +259,7 @@ class CardScanner implements Camera.PreviewCallback, Camera.AutoFocusCallback,
             if (supportedPreviewSizes != null) {
                 Size previewSize = null;
                 for (Size s : supportedPreviewSizes) {
-                    if (s.width == 640 && s.height == 480) {
-                        previewSize = s;
-                        break;
-                    }
+                    previewSize = s;
                 }
                 if (previewSize == null) {
                     previewSize = supportedPreviewSizes.get(0);
