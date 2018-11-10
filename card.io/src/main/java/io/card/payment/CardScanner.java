@@ -54,8 +54,8 @@ class CardScanner implements Camera.PreviewCallback, Camera.AutoFocusCallback,
     static final int ORIENTATION_PORTRAIT = 1;
 
     // these values MUST match those in dmz_constants.h
-    static final int CREDIT_CARD_TARGET_WIDTH = 428; // kCreditCardTargetWidth
-    static final int CREDIT_CARD_TARGET_HEIGHT = 270; // kCreditCardTargetHeight
+    static final int CREDIT_CARD_TARGET_WIDTH = 600; // kCreditCardTargetWidth
+    static final int CREDIT_CARD_TARGET_HEIGHT = 378; // kCreditCardTargetHeight
 
     // NATIVE
     public static native boolean nUseNeon();
@@ -90,8 +90,8 @@ class CardScanner implements Camera.PreviewCallback, Camera.AutoFocusCallback,
     private int mUnblurDigits = DEFAULT_UNBLUR_DIGITS;
 
     // read by CardIOActivity to set up Preview
-    final int mPreviewWidth = 640;
-    final int mPreviewHeight = 480;
+    final int mPreviewWidth = 1280;
+    final int mPreviewHeight = 720;
 
     private int mFrameOrientation = ORIENTATION_PORTRAIT;
 
@@ -260,6 +260,7 @@ class CardScanner implements Camera.PreviewCallback, Camera.AutoFocusCallback,
                 Size previewSize = null;
                 for (Size s : supportedPreviewSizes) {
                     previewSize = s;
+
                 }
                 if (previewSize == null) {
                     previewSize = supportedPreviewSizes.get(0);
